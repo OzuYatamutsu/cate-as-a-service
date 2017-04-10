@@ -1,0 +1,11 @@
+language: python
+python:
+  - "3.6"
+cache: pip
+email:
+  - seanc@seancotech.com
+install:
+  - pip install nose
+script:
+  - nosetests
+
