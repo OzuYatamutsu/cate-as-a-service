@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from text import cateify
 from flask import Flask, request, redirect
 from sys import argv
