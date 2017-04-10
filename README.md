@@ -1,4 +1,4 @@
-# Cateify-as-a-service [![Build Status](https://travis-ci.org/OzuYatamutsu/cate-as-a-service.svg?branch=master)](https://travis-ci.org/OzuYatamutsu/cate-as-a-service)
+# Cate-as-a-service [![Build Status](https://travis-ci.org/OzuYatamutsu/cate-as-a-service.svg?branch=master)](https://travis-ci.org/OzuYatamutsu/cate-as-a-service)
 
 ### `POST /` with your favorite HTTP client...
 ```
