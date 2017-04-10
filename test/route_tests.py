@@ -11,7 +11,7 @@ class RouteTests(TestCase):
         self.assertNotEqual(response.data, '')
 
     def test_can_post_index(self):
-        response = self.app.post('/', data='text=test')
+        response = self.app.post('/', data=dict(text=test))
         self.assertEqual(response.status_code, 200)
         self.assertNotEqual(response.data, '')         
 
