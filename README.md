@@ -14,6 +14,11 @@ curl -X POST https://cate.steakscorp.org/ --data 'text=cate, arr'
 ｃａｔｅ，　ａｒｒ
 ```
 
-## Try it out!
+## Try it out with a `POST` to the endpoint below!
+```
 https://cate.steakscorp.org/
+```
+
+## MAO,
+=｀ω´ =｀ω´=｀ω´=｀ω´=｀ω´=
 
