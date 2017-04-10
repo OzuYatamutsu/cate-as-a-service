@@ -1,5 +1,6 @@
 from text import cateify
 from flask import Flask, request, redirect
+from sys import argv
  
 app = Flask(__name__)
 
@@ -14,5 +15,9 @@ def index_get():
     redirect_location = 'https://github.com/OzuYatamutsu/cateify-as-a-service'
     return redirect(redirect_location) 
 
-app.run()
+if __name__ == '__main__':
+    if len(argv) == 2:
+        app.run(port=argv[1])
+    else:
+        app.run()
 
