@@ -1,8 +1,10 @@
 # Cate-as-a-service [![Build Status](https://travis-ci.org/OzuYatamutsu/cate-as-a-service.svg?branch=master)](https://travis-ci.org/OzuYatamutsu/cate-as-a-service)
 
-### `POST /` with your favorite HTTP client...
+### `POST /` or `GET /cate` with your favorite HTTP client...
 ```
 curl -X POST https://cate.steakscorp.org/ --data 'text=cate, arr'
+
+curl 'https://cate.steakscorp.org/cate?text=cate,%20arr'
 ```
 
 | Name   |                Description |
