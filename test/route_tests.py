@@ -7,11 +7,11 @@ class RouteTests(TestCase):
     
     def test_can_get_index(self):
         response = self.app.get('/')
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 302)  # Should redirect
         self.assertNotEqual(response.data, '')
 
     def test_can_post_index(self):
-        response = self.app.post('/', 'test')
+        response = self.app.post('/', data='text=test')
         self.assertEqual(response.status_code, 200)
         self.assertNotEqual(response.data, '')         
 
