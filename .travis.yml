@@ -5,7 +5,7 @@ cache: pip
 email:
   - seanc@seancotech.com
 install:
-  - pip install nose
+  - pip install nose flask
 script:
   - nosetests
 
