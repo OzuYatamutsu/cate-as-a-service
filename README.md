@@ -3,7 +3,7 @@
 ### `POST /` or `GET /cate` with your favorite HTTP client...
 ```
 curl -X POST https://cate.steakscorp.org/ --data 'text=cate, arr'
-
+curl -X POST https://cate.steakscorp.org/ --data '{"text": "cate, arr"}'
 curl 'https://cate.steakscorp.org/cate?text=cate,%20arr'
 ```
 
@@ -16,7 +16,7 @@ curl 'https://cate.steakscorp.org/cate?text=cate,%20arr'
 ｃａｔｅ，　ａｒｒ
 ```
 
-### Try it out with a `POST` to the endpoint below!
+### Try it out with a `POST` or `GET` to the endpoint below!
 ```
 https://cate.steakscorp.org/
 ```
