@@ -22,7 +22,7 @@ def index_post():
 @app.route('/', methods=['GET'])
 def index_get():
     # (Redirects to repo)
-    redirect_location = 'https://github.com/OzuYatamutsu/cateify-as-a-service'
+    redirect_location = 'https://github.com/OzuYatamutsu/cate-as-a-service'
     return redirect(redirect_location)
 
 @app.route('/cate', methods=['GET'])
