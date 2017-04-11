@@ -31,7 +31,7 @@ def cate_get():
     if input_text:
         return cateify(input_text)
     else:
-        abort(400)
+        return ''
 
 if __name__ == '__main__':
     if len(argv) == 2:
