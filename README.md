@@ -4,7 +4,7 @@
 ```
 curl -X POST https://cate.steakscorp.org/ --data 'text=cate, arr'
 curl -X POST https://cate.steakscorp.org/ --data '{"text": "cate, arr"}'
-curl 'https://cate.steakscorp.org/cate?text=cate,%20arr'
+curl 'https://cate.steakscorp.org/cate/cate,%20arr'
 ```
 
 | Name   |                Description |
