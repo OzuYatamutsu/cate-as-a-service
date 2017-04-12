@@ -35,6 +35,10 @@ def cate_get():
     else:
         return abort(400)
 
+@app.route('/cate/<string:text>', methods=['GET'])
+def cate_get_extended_route(text):
+    return __generate_meme_response(cateify(text))
+
 def __generate_meme_response(text: str) -> Response:
     response = Response(text)
     
