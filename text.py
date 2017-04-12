@@ -1,4 +1,4 @@
-monospace_base = 65248;
+monospace_base = 0xfee0
 
 def cateify(input_text: str) -> str:
     """
