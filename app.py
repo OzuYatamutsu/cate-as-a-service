@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from text import cateify
-from flask import Flask, abort, request, redirect
+from flask import Flask, abort, request, redirect, Response
 from sys import argv
 from json import loads
 
@@ -19,7 +19,7 @@ def index_post():
             input_text = request.form['text']
         else:
             abort(400)
-    return cateify(input_text)
+    return __generate_meme_response(cateify(input_text))
 
 @app.route('/', methods=['GET'])
 def index_get():
@@ -31,9 +31,17 @@ def index_get():
 def cate_get():
     input_text = request.args.get('text')
     if input_text:
-        return cateify(input_text)
+        return __generate_meme_response(cateify(input_text))
     else:
         return abort(400)
+
+def __generate_meme_response(text: str) -> Response:
+    response = Response(text)
+    
+    # Add headers
+    response.headers['Meme-Type'] = 'text/c a t e'
+
+    return response
 
 if __name__ == '__main__':
     if len(argv) == 2:
