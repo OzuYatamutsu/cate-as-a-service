@@ -13,10 +13,12 @@ def index_post():
 
     try:
         input_text = request.get_json(force=True)
-        input_text = input_text.get('text', '')
+        input_text = input_text['text']
     except Exception as e:
-        if request.form is not None:
-            input_text = request.form.get('text', '')
+        if request.form is not None and 'text' in request.form:
+            input_text = request.form['text']
+        else:
+            abort(400)
     return cateify(input_text)
 
 @app.route('/', methods=['GET'])
@@ -31,7 +33,7 @@ def cate_get():
     if input_text:
         return cateify(input_text)
     else:
-        return ''
+        return abort(400)
 
 if __name__ == '__main__':
     if len(argv) == 2:
